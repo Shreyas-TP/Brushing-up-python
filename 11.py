@@ -2,7 +2,7 @@
 # It allows you to generate a new collection by applying an expression to each item
 #  in an iterable, optionally filtering items using a condition.
 
-
+'''
 #looping through a list and calculating the total
 l=[1,2,3,4,5]
 total=0
@@ -92,3 +92,43 @@ print(l)
 #direct input and splitting it into a list of integers
 y= [int(x) for x in input("enter a number: ").split()]
 print(y)
+'''
+
+#practice
+
+foods=["lemmon rice", "curd rice", "bisibele bath", "lemon rice", "curd rice", "bisibele bath"]
+print(foods)
+uf=[x.upper() for x in foods]
+print(uf)
+
+items = {"pen": 10, "pencil": 5, "eraser": 3 }
+for i in items:
+    print(f"{i}, costs {items[i] } rupees")
+total =0
+for i in items:
+    total+=items[i] 
+print(total)
+
+total_cost = sum(items.values())#calculating the total cost by summing the values of the items dictionary using the sum() function and the values() method
+print(f"total_cost is -->> {total_cost}")
+
+l=[1,2,3,4,5]
+squared=[i**2 for i in l]
+print(squared)
+
+student=["Shreyas", "Ananya"]
+age=[20, 19]
+marks=[85, 90]
+student_info={student[i]:{"age": age[i], "marks": marks[i]} for i in range(len(student))}
+print(student_info)
+
+#nested list - Write a Python program that takes a list of lists (a 2D list) as input and:
+
+#Prints the entire matrix row by row.
+#Prints the sum of each row in the matrix.
+
+matrix=input("enter a 2D list (matrix) with rows separated by ';' and elements separated by ',': ")
+matrix=[row.split(",") for row in matrix.split(";")]#splitting the input string
+print("Matrix:")
+for row in matrix:
+    print(row)  
