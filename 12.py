@@ -53,3 +53,18 @@ def func(a,b):
 print(func(10,20))
 print(func(5,15))
    
+#take only name as input and print the full name with a default sirname
+name=input("enter your name: ")
+def fullname(name, sirname="theetha"):
+    return name + " " + sirname
+print(fullname(name))#only name is provided, so the default sirname will be used
+
+
+
+
+
+name =input("enther ur name: ")
+
+def fullname(name, sirname="theetha"):#default parameter is used when we want to give a default value to a parameter in case the user does not provide a value for that parameter.
+    return name + sirname
+print(fullname(name))
