@@ -68,3 +68,5 @@ name =input("enther ur name: ")
 def fullname(name, sirname="theetha"):#default parameter is used when we want to give a default value to a parameter in case the user does not provide a value for that parameter.
     return name + sirname
 print(fullname(name))
+
+
