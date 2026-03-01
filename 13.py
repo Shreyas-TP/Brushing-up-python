@@ -44,7 +44,7 @@ print(double(5))
 std_marks = [{'name': 'John', 'marks': 85}, {'name': 'Alice', 'marks': 90}, {'name': 'Bob', 'marks': 78}]
 sorted_marks = sorted(std_marks, key=lambda x: x["marks"], reverse=True )
 print(sorted_marks)
-'''
+
 
 #Recusion
 
@@ -57,3 +57,70 @@ def factorial(n):
         return 1# Recursive case: the factorial of n is n multiplied by the factorial of n-1
     return n * factorial(n-1)  # This will calculate the factorial of n by calling itself with n-1 until it reaches the base case
 print(factorial(5))# This will print 120, which is the factorial of 5 (5 * 4 * 3 * 2 * 1)
+
+
+# nested functions
+
+def calculate(a,b):
+    def add():
+        print(a + b)
+    def subtract():
+        print(a - b)        
+    def multiply():
+        print(a * b)
+    def divide():
+        print(a / b)
+    add()
+    subtract()      
+    multiply()
+    divide()
+calculate(10, 5)
+
+
+def calculator(x, y):
+    def add():
+        return x + y
+    def subtract():
+        return x - y
+    def multiply():
+        return x * y
+    def divide():
+        if y != 0:
+            return x / y
+        else:
+            return "Cannot divide by zero"
+    return add(), subtract(), multiply(), divide()
+result = calculator(10, 5)
+print("Addition:", result[0])   
+print("Subtraction:", result[1])   
+print("Multiplication:", result[2])   
+print("Division:", result[3])   
+
+'''
+
+#final touch
+
+multiply = lambda x, y: x * y
+print(multiply(5, 3))
+
+def average(*numbers):
+
+    return sum(numbers) / len(numbers)
+print(average(1, 2, 3, 4, 5))
+
+
+#recursive function that calculates the sum of the first n numbers
+def sum_of_n(n):
+    # Base case: if n is 0 or less, the sum is 0
+    if n <= 0:
+        return 0
+    # Recursive step: n + sum of the first (n-1) numbers
+    else:
+        return n + sum_of_n(n - 1)
+
+# Example usage:
+n = 5
+result = sum_of_n(n)
+print(f"The sum of the first {n} numbers is: {result}") 
+
+
