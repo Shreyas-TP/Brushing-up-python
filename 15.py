@@ -35,3 +35,16 @@ m3=mobile("ONEPLUS","25000")
 m1.display()
 m2.display()
 m3.display()
+
+
+class Student:
+    def __init__(self, name, marks):
+        self.name=name
+        self.marks=marks
+    def display_info(self):
+        print(f"Name is : {self.name} and marks is : {self.marks}")
+stu1=Student("Shreyas", 80)
+stu2=Student("Shreya", 90)
+
+stu1.display_info()
+stu2.display_info()
