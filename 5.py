@@ -31,6 +31,10 @@ list.reverse()
 print(list)'''
 
 #nested lists
-list =[[1,2,3],["a","b","c"] ]
+list =[[1,2,3],[4,5,6] ]
+list.sort()
 
-print(list[1][1])
+print(list[-1])
+
+Nested_list=[[] for n in range(2,6)]
+print(Nested_list)
