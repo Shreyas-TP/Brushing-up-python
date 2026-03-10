@@ -183,9 +183,11 @@ class Manager(Employee):
         self.rph=rph
     def claculate_salary(self):
         return self.wh * self.rph
+    
+ # Instantiate the concrete subclass Manager   
 emp=Manager("shreyas", 160, 2500)
 emp.display_info()
 
-
+# Call the implemented abstract method
 sal=emp.claculate_salary()
 print(f" calculated salary is {sal}")
